@@ -1,1 +1,1 @@
-Asesor de rutinas personalizadas para el cuidado de la piel 
+Personalized Skin Care Routine Advisor 
