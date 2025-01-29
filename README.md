@@ -6,6 +6,8 @@ Skin Care Advisor is a platform that helps users create personalized skincare ro
 
 ---
 
+With this modular structure, it will be easier to scale the project and maintain an orderly code:
+
 ## 📂 Project Structure 
 
 ## 🔹 Structure Explanation  
