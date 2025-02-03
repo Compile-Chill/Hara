@@ -1,28 +1,45 @@
-#  Skin Care Advisor - Structure for the frontend
+#  Skin Care Advisor 
 
 Skin Care Advisor is a platform that helps users create personalized skincare routines based on their skin type, habits, and budget.
 
+ ## Structure for the frontend
+
 With this modular structure, it will be easier to scale the project and maintain an orderly code:
 
-## public/
-- index.html: Main HTML file.
-- favicon.ico: Application icon.
-- manifest.json: PWA configuration.
-
-## src/
-- assets/: Images, fonts, and static files.
-- components/: Reusable UI components.
-- pages/: Main application pages.
-- hooks/: Custom hooks for state logic.
-- services/: Services to handle business logic and API interactions.
-- store/: Folder for global state management (if using Redux or Context API).
-- styles/: Global and component-specific styles.
-- utils/: Utility functions.
-
-## Other Files
-- .env: Sensitive environment variables.
-- package.json: Project dependencies and configurations.
-- .gitignore: Files that should be ignored by Git.
+/skin-care-advisor-frontend  
+│── /public  
+│   ├── index.html  # Main HTML file  
+│   ├── favicon.ico # Site icon  
+│── /src  
+│   ├── /modules  # Modular structure based on domains  
+│   │   ├── /auth  # Authentication module  
+│   │   │   ├── components/  # Components related to authentication  
+│   │   │   ├── hooks/  # Authentication-specific hooks  
+│   │   │   ├── services/  # API calls for authentication  
+│   │   │   ├── pages/  # Login, register, password recovery pages  
+│   │   ├── /profile  # User profile module  
+│   │   │   ├── components/  
+│   │   │   ├── hooks/  
+│   │   │   ├── services/  
+│   │   │   ├── pages/  
+│   │   ├── /evaluation  # Skin evaluation module  
+│   │   │   ├── components/  
+│   │   │   ├── hooks/  
+│   │   │   ├── services/  
+│   │   │   ├── pages/  
+│   │   ├── /routines  # Personalized routines module  
+│   │   ├── /products  # Recommended products module  
+│   │   ├── /community  # Community and recommendations module  
+│   ├── /shared  # Reusable elements across multiple modules  
+│   │   ├── components/  # Global components  
+│   │   ├── hooks/  # Reusable hooks  
+│   │   ├── services/  # Global API calls  
+│   │   ├── styles/  # Shared styles  
+│   ├── App.jsx  # Main application component  
+│   ├── main.jsx  # Entry point of the application  
+│── package.json  # Project dependencies and scripts  
+│── .gitignore  # Files and folders to exclude from Git  
+│── README.md  # Project documentation  
 
 ### Links
 - Guide on project structure in React: https://react.dev/learn#scaling-up-with-reducer-and-context
