@@ -1,36 +1,38 @@
-## Estructura del Proyecto
+#  Skin Care Advisor - Structure for the frontend
 
-Esta es la estructura de carpetas y archivos para el frontend del proyecto de "Asesor de Rutinas Personalizadas para el Cuidado de la Piel", construido con ReactJS.
+Skin Care Advisor is a platform that helps users create personalized skincare routines based on their skin type, habits, and budget.
 
-### public/
-- `index.html`: Archivo HTML principal.
-- `favicon.ico`: Ícono de la aplicación.
-- `manifest.json`: Configuración de la PWA.
+With this modular structure, it will be easier to scale the project and maintain an orderly code:
 
-### src/
-- `assets/`: Imágenes, fuentes y archivos estáticos.
-- `components/`: Componentes reutilizables de la UI.
-- `pages/`: Páginas principales de la aplicación.
-- `hooks/`: Hooks personalizados para la lógica de estado.
-- `services/`: Servicios para manejar la lógica de negocio y las interacciones con APIs.
-- `store/`: Carpeta para la gestión del estado global (si se usa Redux o Context API).
-- `styles/`: Estilos globales y específicos para componentes.
-- `utils/`: Funciones de utilidad.
+## public/
+- index.html: Main HTML file.
+- favicon.ico: Application icon.
+- manifest.json: PWA configuration.
 
-### Otros Archivos
-- `.env`: Variables de entorno sensibles.
-- `package.json`: Dependencias y configuraciones del proyecto.
-- `.gitignore`: Archivos que deben ser ignorados por Git.
+## src/
+- assets/: Images, fonts, and static files.
+- components/: Reusable UI components.
+- pages/: Main application pages.
+- hooks/: Custom hooks for state logic.
+- services/: Services to handle business logic and API interactions.
+- store/: Folder for global state management (if using Redux or Context API).
+- styles/: Global and component-specific styles.
+- utils/: Utility functions.
 
-## Enlaces
-- Guía sobre estructura de proyectos en React (https://react.dev/learn#scaling-up-with-reducer-and-context)
-- React: Construyendo y organizando componentes (https://react.dev/learn#defining-a-component)
-- Agregar React a un proyecto existente (https://es.react.dev/learn/add-react-to-an-existing-project#using-react-for-a-part-of-your-existing-page)
-- React Router - Definición de rutas (https://reactrouter.com/home#react-router-as-a-library)
--  Guía oficial de hooks en React (https://react.dev/reference/react/useState)
-- Styled Components (https://styled-components.com/)
-- Documentación de package.json (https://docs.npmjs.com/cli/v9/configuring-npm/package-json)
-- Documentación oficial de Git (https://git-scm.com/docs/gitignore)
+## Other Files
+- .env: Sensitive environment variables.
+- package.json: Project dependencies and configurations.
+- .gitignore: Files that should be ignored by Git.
+
+### Links
+- Guide on project structure in React: https://react.dev/learn#scaling-up-with-reducer-and-context
+- React: Building and organizing components: https://react.dev/learn#defining-a-component
+- Adding React to an existing project: https://react.dev/learn/add-react-to-an-existing-project#using-react-for-a-part-of-your-existing-page
+- React Router - Route definition: https://reactrouter.com/home#react-router-as-a-library
+- Official React hooks guide: https://react.dev/reference/react/useState
+- Styled Components: https://styled-components.com/
+- package.json documentation: https://docs.npmjs.com/cli/v9/configuring-npm/package-json
+- Official Git documentation: https://git-scm.com/docs/gitignore
 
 
 
