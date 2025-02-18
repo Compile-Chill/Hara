@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Skin Care Advisor - Structure for the frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the folder structure for the frontend of the Skin Care Advisor project, organized in a modular way based on domains.
 
-## Available Scripts
+## /public
+- **index.html**: Main HTML file for the application.
+- **favicon.ico**: Site icon.
 
-In the project directory, you can run:
+## /src
+### /modules
+- **/auth**: Authentication module.
+  - **components/**: Components related to authentication (e.g., login form, registration form).
+  - **hooks/**: Authentication-specific hooks (e.g., useAuth).
+  - **services/**: API calls for authentication (e.g., login, registration, password recovery).
+  - **pages/**: Pages for login, registration, password recovery.
 
-### `npm start`
+- **/profile**: User profile module.
+  - **components/**: Components related to the user profile (e.g., profile form, profile display).
+  - **hooks/**: Hooks specific to user profile management.
+  - **services/**: API calls for user profile data.
+  - **pages/**: Pages for viewing and editing the user profile.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **/evaluation**: Skin evaluation module.
+  - **components/**: Components for the skin evaluation process.
+  - **hooks/**: Hooks for managing evaluation data.
+  - **services/**: API calls related to skin evaluation.
+  - **pages/**: Pages for initiating and viewing the skin evaluation.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **/routines**: Personalized routines module.
+  - **components/**: Components for displaying and managing skin care routines.
+  - **hooks/**: Hooks for managing routine data.
+  - **services/**: API calls related to personalized routines.
+  - **pages/**: Pages for creating, viewing, and editing routines.
 
-### `npm test`
+- **/products**: Recommended products module.
+  - **components/**: Components for displaying recommended products.
+  - **hooks/**: Hooks for managing product data.
+  - **services/**: API calls related to recommended products.
+  - **pages/**: Pages for browsing and comparing products.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **/community**: Community and recommendations module.
+  - **components/**: Components related to community interactions (e.g., reviews, ratings).
+  - **hooks/**: Hooks for managing community data.
+  - **services/**: API calls related to the community features.
+  - **pages/**: Pages for viewing and interacting with the community.
 
-### `npm run build`
+### /shared
+- **components/**: Global components used across multiple modules (e.g., buttons, headers, footers).
+- **hooks/**: Reusable hooks used across multiple modules (e.g., useFetch, useLocalStorage).
+- **services/**: Global API calls shared across modules.
+- **styles/**: Shared styles, such as global styles or themes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Main Files
+- **App.jsx**: Main component of the application.
+- **main.jsx**: Entry point of the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Root Files
+- **package.json**: Project dependencies and scripts.
+- **.gitignore**: Files and folders to exclude from Git.
+- **README.md**: Project documentation.  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Links
+- Guide on project structure in React: https://react.dev/learn#scaling-up-with-reducer-and-context
+- React: Building and organizing components: https://react.dev/learn#defining-a-component
+- Adding React to an existing project: https://react.dev/learn/add-react-to-an-existing-project#using-react-for-a-part-of-your-existing-page
+- React Router - Route definition: https://reactrouter.com/home#react-router-as-a-library
+- Official React hooks guide: https://react.dev/reference/react/useState
+- Styled Components: https://styled-components.com/
+- package.json documentation: https://docs.npmjs.com/cli/v9/configuring-npm/package-json
+- Official Git documentation: https://git-scm.com/docs/gitignore
