@@ -73,12 +73,19 @@ This project is licensed under the MIT license.
 ## Links 
 
 • Guide on project structure in React: https://react.dev/learn#scaling-up-with-reducer-and-context
+
 • React: Building and organizing components: https://react.dev/learn#defining-a-component
-• Adding React to an existing project: https://react.dev/learn add-react-to-an-existing-project#using-react-for-a-part-of-your-existing-page
+
+• Adding React to an existing project: https://react.dev/learnadd-react-to-an-existing-project#using-react-for-a-part-of-your-existing-page
+
 •React Router - Route definition: https://reactrouter.com/home#react-router-as-a-library
+
 • Official React hooks guide: https://react.dev/reference/react/useState
+
 • Styled Components: https://styled-components.com/
-• package.json documentation: https://docs.npmjs.com/cli/v9/configuring-npm/package-json
+
+• Package.json documentation: https://docs.npmjs.com/cli/v9/configuring-npm/package-json
+
 •Official Git documentation: https://git-scm.com/docs/gitignore
 
 
