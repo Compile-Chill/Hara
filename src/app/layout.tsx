@@ -1,23 +1,36 @@
-import { ReactNode } from "react";
-import { cookies } from "next/headers";
+"use client";
+
+import { useEffect, useState } from "react";
 import { defaultLocale, locales } from "@/i18n/config";
 
-export default async function RootLayout({ children }: { children: ReactNode }) {
-  // Leer el idioma desde las cookies
-  const locale = cookies().get("locale")?.value || defaultLocale;
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [locale, setLocale] = useState<string>(defaultLocale);
 
-  // Cargar traducciones
+  useEffect(() => {
+    const browserLang = navigator.language.split("-")[0];
+    console.log("Detected language:", browserLang);
+
+    if (locales.includes(browserLang as any)) {
+      setLocale(browserLang);
+    } else {
+      setLocale(defaultLocale);
+    }
+  }, []);
+
+  console.log("Selected language:", locale);
+
   let messages;
   try {
-    messages = (await import(`@/i18n/messages/${locale}.json`)).default;
+    messages = require(`@/i18n/messages/${locale}.json`);
   } catch (error) {
-    messages = (await import(`@/i18n/messages/${defaultLocale}.json`)).default;
+    console.error("Error loading translations:", error);
+    messages = require(`@/i18n/messages/${defaultLocale}.json`);
   }
 
   return (
     <html lang={locale}>
       <body>
-        <h1>{messages.greeting}</h1>
+        <h2>{messages.greeting}</h2>
         {children}
       </body>
     </html>
