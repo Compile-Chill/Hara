@@ -6,9 +6,10 @@ import { defaultLocale, locales } from "@/i18n/config";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [locale, setLocale] = useState<string>(defaultLocale);
 
+  /*Detect browser language*/
+
   useEffect(() => {
     const browserLang = navigator.language.split("-")[0];
-    console.log("Detected language:", browserLang);
 
     if (locales.includes(browserLang as any)) {
       setLocale(browserLang);
@@ -17,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     }
   }, []);
 
-  console.log("Selected language:", locale);
+  /*Load translations*/
 
   let messages;
   try {
