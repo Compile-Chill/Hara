@@ -18,7 +18,18 @@ frontend-hara/
     └── app/
         ├── layout.tsx    // Main layout (global wrapper).
         ├── page.tsx      // Main page (home).
-        └── globals.css   // Global styles (affects the whole project).
+        ├── globals.css   // Global styles (affects the whole project).
+        └── components/
+            └──Navbar.tsx
+    └── hooks/
+        └── useLocale.ts
+    └── i18n/
+         ├──config.ts
+         └──messages/
+            ├──en.json
+            ├──es.jason
+            └──fr.json
+
 ```
 
 ## 📄 License

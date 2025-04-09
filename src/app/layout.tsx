@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { defaultLocale, locales } from "@/i18n/config";
+import "./globals.css"; 
+import Navbar from "./components/Navbar"; 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [locale, setLocale] = useState<string>(defaultLocale);
 
-  /*Detect browser language*/
-
+  /* Detect browser language */
   useEffect(() => {
     const browserLang = navigator.language.split("-")[0];
 
@@ -18,8 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     }
   }, []);
 
-  /*Load translations*/
-
+  /* Load translations */
   let messages;
   try {
     messages = require(`@/i18n/messages/${locale}.json`);
@@ -31,8 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={locale}>
       <body>
-        <h2>{messages.greeting}</h2>
-        {children}
+        <Navbar /> {}
+        <main>{children}</main> {/* Here the pages are loaded dynamically */}
       </body>
     </html>
   );

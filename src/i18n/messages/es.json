@@ -1,3 +1,21 @@
 {
-  "greeting": "¡Hola, mundo!"
+  "navbar": {
+    "store": "Tienda",
+    "about": "Sobre Nosotros",
+    "community": "Comunidad"
+  },
+  "hero": {
+    "title": "Renueva tu piel, renueva tu energía",
+    "description": "Regístrate en Hara Skincare y obtén acceso a rutinas personalizadas, un foro exclusivo con respuestas a tus preguntas y una comunidad donde compartir experiencias y consejos. ¡Tu piel merece lo mejor, únete hoy!",
+    "cta": "Abrir cuenta"
+  },
+  "bestsellers": {
+    "title": "Nuestros más vendidos",
+    "description": "Descubre cada producto con ingredientes clave, beneficios, compatibilidad con la piel y reseñas de usuarios"
+  },
+  "footer": {
+    "contact": "Contáctanos",
+    "whatsapp": "Whatsapp: 322 123 XXXX",
+    "email": "Correo: haraskincare@gmail.com"
+  }
 }
