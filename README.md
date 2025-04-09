@@ -7,28 +7,29 @@ Hara is a Next.js and TypeScript-based application that helps users discover the
 ## 📂 Project structure
 ```
 frontend-hara/
-├── .gitignore            // Files to be ignored by Git.
-├── eslint.config.mjs     // ESLint (ECMAScript Modules) configuration.
-├── next.config.js        // Next.js configuration.
-├── package.json          // Dependencies and scripts.
-├── README.md             // Project documentation.
-├── tsconfig.json         // TypeScript configuration.
-├── yarn.lock             // Yarn dependencies lock.
-└── src/
-    └── app/
-        ├── layout.tsx    // Main layout (global wrapper).
-        ├── page.tsx      // Main page (home).
-        ├── globals.css   // Global styles (affects the whole project).
-        └── components/
-            └──Navbar.tsx
-    └── hooks/
-        └── useLocale.ts
-    └── i18n/
-         ├──config.ts
-         └──messages/
-            ├──en.json
-            ├──es.jason
-            └──fr.json
+├── .gitignore              # Files and folders ignored by Git
+├── eslint.config.mjs       # ESLint configuration for code quality and consistency
+├── next.config.js          # Next.js project configuration
+├── package.json            # Project metadata, dependencies, and scripts
+├── README.md               # Main project documentation
+├── tsconfig.json           # TypeScript configuration
+├── yarn.lock               # Yarn lockfile for consistent dependency versions
+└── src/                    # Application source code
+    └── app/                # Main app directory following Next.js 13+ convention
+        ├── layout.tsx      # Root layout that wraps all pages
+        ├── page.tsx        # Main landing page (home)
+        ├── globals.css     # Global styles for the entire app
+        └── components/     # Reusable UI components used in the main layout/page
+            ├── BestsellerSection.tsx   # Section highlighting best-selling products
+            ├── Footer.tsx              # Website footer component
+            ├── HeroSection.tsx         # Hero section with main CTA (call to action)
+            └── Navbar.tsx              # Top navigation bar
+    └── i18n/                # Internationalization (i18n) configuration
+        ├── config.ts        # i18n setup and language switch logic
+        └── messages/        # Translation files organized by language
+            ├── en.json      # English translations
+            ├── es.json      # Spanish translations
+            └── fr.json      # French translations
 
 ```
 
