@@ -1,8 +1,6 @@
 # 🌟 Hara - Personalized Skin Care Routines Consultant
 
-
 Hara is a Next.js and TypeScript-based application that helps users discover the perfect skincare routine. Through an interactive quiz and data analysis, the platform offers personalized recommendations and progress tracking.
-
 
 ## 📂 Project structure
 ```
@@ -43,14 +41,15 @@ This project is licensed under the MIT license.
 
 * Next.js official documentation: https://nextjs.org/docs
 
-
 * Official TypeScript documentation: https://www.typescriptlang.org/docs
-
 
 * ESLint Guide: https://eslint.org/docs/latest/
 
-
 * Yarn guide: https://yarnpkg.com/getting-started
 
-
 * Domain Driven Design (DDD) in frontend: https://khalilstemmler.com/articles/domain-driven-design-intro/
+
+* React components and props: https://react.dev/learn/passing-props-to-a-component
+
+* Tailwind CSS: https://tailwindcss.com/docs/installation/using-vite
+
