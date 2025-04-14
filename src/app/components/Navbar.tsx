@@ -2,30 +2,31 @@
 
 import Link from "next/link";
 import { Search, User } from "lucide-react";
-import { useEffect, useState } from "react";
-import { defaultLocale, locales } from "@/i18n/config";
+import useLanguage from "@/hooks/useLanguage"; 
+import { useState } from "react";
 
 export default function Navbar() {
-  const [messages, setMessages] = useState<any>(null);
-  const [locale, setLocale] = useState(defaultLocale);
+  const { locale, messages } = useLanguage();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const browserLang = navigator.language.split("-")[0];
-    const lang = locales.includes(browserLang as any) ? browserLang : defaultLocale;
-    setLocale(lang);
-
-    import(`@/i18n/messages/${lang}.json`)
-      .then((module) => setMessages(module.default))
-      .catch(() => import(`@/i18n/messages/${defaultLocale}.json`).then((module) => setMessages(module.default)));
-  }, []);
-
-  if (!messages) return null; 
+  if (!messages) return null;
 
   return (
-    <nav className="w-full bg-[#F8F1E7] py-4 px-6 flex justify-between items-center shadow-md">
+    <nav className="w-full bg-[#F8F1E7] py-4 px-6 flex justify-between items-center shadow-md relative">
+      {/* Hamburger Menu (visible only on small screens) */}
+      <div className="flex items-center gap-6 md:hidden">
+        <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-600">
+          {/* Menu icon */}
+          {menuOpen ? (
+            <span className="text-2xl">✖</span>
+          ) : (
+            <span className="text-2xl">☰</span>
+          )}
+        </button>
+      </div>
 
-      {/* Navigation menu */}
-      <div className="flex gap-25 text-lg font-medium text-gray-700 ml-14">
+      {/* Navigation menu (visible on large screens) */}
+      <div className="hidden md:flex gap-6 text-lg font-medium text-gray-700 ml-14">
         <Link href="/store" className="hover:text-gray-900 text-[16px]">
           {messages.navbar.store}
         </Link>
@@ -37,15 +38,15 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Hara logo */}
+      {/* Centered logo */}
       <div className="absolute left-1/2 transform -translate-x-1/2">
         <Link href="/">
           <img src="/logo-hara.png" alt="Hara Logo" className="w-20 h-16" />
         </Link>
       </div>
 
-      {/* Search and login icons */}
-      <div className="flex gap-10 text-gray-600 mr-14">
+      {/* Search and login icons (visible on all screen sizes) */}
+      <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex gap-4 md:gap-6 text-gray-600">
         <button className="p-2 hover:text-gray-900">
           <Search size={24} className="text-inherit" />
         </button>
@@ -54,6 +55,24 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Drop-down menu on small screens */}
+      <div
+        className={`${
+          menuOpen ? "block" : "hidden"
+        } absolute top-16 left-0 bg-[#F8F1E7] py-4 px-6 rounded-lg w-full md:hidden z-50`}
+      >
+        <div className="flex flex-col gap-4 text-lg font-medium text-gray-700">
+          <Link href="/store" className="hover:text-gray-900">
+            {messages.navbar.store}
+          </Link>
+          <Link href="/about" className="hover:text-gray-900">
+            {messages.navbar.about}
+          </Link>
+          <Link href="/community" className="hover:text-gray-900">
+            {messages.navbar.community}
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 }

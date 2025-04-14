@@ -22,6 +22,8 @@ frontend-hara/
             ├── Footer.tsx              # Website footer component
             ├── HeroSection.tsx         # Hero section with main CTA (call to action)
             └── Navbar.tsx              # Top navigation bar
+    └── hooks/               # Custom React hooks for reusable logic
+        └── useLanguage.ts   # Detects browser language and dynamically loads locale messages
     └── i18n/                # Internationalization (i18n) configuration
         ├── config.ts        # i18n setup and language switch logic
         └── messages/        # Translation files organized by language

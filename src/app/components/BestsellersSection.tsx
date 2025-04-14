@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import { defaultLocale, locales } from "@/i18n/config";
+import { useRef } from "react";
+import useLanguage from "@/hooks/useLanguage"; 
 
 const products = [
   { id: 1, image: "/products/product1.jpg", alt: "Product 1" },
@@ -18,20 +18,7 @@ export default function BestsellersSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const cardWidth = 240;
 
-  const [locale, setLocale] = useState(defaultLocale);
-  const [messages, setMessages] = useState<any>({});
-
-  useEffect(() => {
-    const browserLang = navigator.language.split("-")[0];
-    const selectedLang = locales.includes(browserLang) ? browserLang : defaultLocale;
-    setLocale(selectedLang);
-
-    import(`@/i18n/messages/${selectedLang}.json`)
-      .then((mod) => setMessages(mod.default))
-      .catch(() =>
-        import(`@/i18n/messages/${defaultLocale}.json`).then((mod) => setMessages(mod.default))
-      );
-  }, []);
+  const { locale, messages } = useLanguage();
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -66,7 +53,15 @@ export default function BestsellersSection() {
           </button>
 
           {/* Carousel */}
-          <div ref={scrollRef} className="mx-10 overflow-x-auto scroll-smooth scrollbar-hide">
+          <div
+            ref={scrollRef}
+            className="mx-10 overflow-x-auto scroll-smooth"
+            style={{
+              scrollbarWidth: "none", // Hide the scrollbar in Firefox
+              WebkitOverflowScrolling: "touch", // Smooth scrolling on mobile devices
+              WebkitScrollbar: "none", // Hide scrollbar in Chrome and Safari
+            }}
+          >
             <div className="flex gap-4 w-max">
               {products.map((product) => (
                 <div key={product.id} className="w-[220px] flex-shrink-0">

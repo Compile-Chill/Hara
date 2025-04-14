@@ -1,29 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { FaTiktok, FaYoutube, FaInstagram } from "react-icons/fa";
-import { defaultLocale, locales } from "@/i18n/config";
+import useLanguage from "@/hooks/useLanguage"; 
 
 export default function Footer() {
-  const [locale, setLocale] = useState(defaultLocale);
-  const [messages, setMessages] = useState<any>({});
-
-  useEffect(() => {
-    const browserLang = navigator.language.split("-")[0];
-    const selectedLocale = locales.includes(browserLang as any)
-      ? browserLang
-      : defaultLocale;
-
-    setLocale(selectedLocale);
-
-    import(`@/i18n/messages/${selectedLocale}.json`)
-      .then((mod) => setMessages(mod))
-      .catch(() => {
-        import(`@/i18n/messages/${defaultLocale}.json`).then((mod) =>
-          setMessages(mod)
-        );
-      });
-  }, []);
+  const { locale, messages } = useLanguage();
 
   return (
     <footer className="bg-[#fef6ef] py-6 px-4">
