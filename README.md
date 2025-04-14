@@ -3,6 +3,7 @@
 Hara is a Next.js and TypeScript-based application that helps users discover the perfect skincare routine. Through an interactive quiz and data analysis, the platform offers personalized recommendations and progress tracking.
 
 ## 📂 Project structure
+
 ```
 frontend-hara/
 ├── .gitignore              # Files and folders ignored by Git
@@ -39,7 +40,6 @@ This project is licensed under the MIT license.
 
 
 ## 📚 Sources of information
-
 
 * Next.js official documentation: https://nextjs.org/docs
 
