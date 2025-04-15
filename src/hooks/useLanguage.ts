@@ -10,7 +10,7 @@ const useLanguage = () => {
     const selectedLang = locales.includes(browserLang) ? browserLang : defaultLocale;
     setLocale(selectedLang);
 
-    // Cargar las traducciones
+    // Load translations
     try {
       import(`@/i18n/messages/${selectedLang}.json`)
         .then((module) => setMessages(module.default))
