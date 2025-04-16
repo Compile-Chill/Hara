@@ -1,27 +1,27 @@
 import { useEffect, useState } from "react";
-import { defaultLocale, locales } from "@/i18n/config";
+import { defaultLocale, locales, Locale } from "@/i18n/config";
+
+
+import en from "@/i18n/messages/en.json";
+import es from "@/i18n/messages/es.json";
+import fr from "@/i18n/messages/fr.json";
+
+const messagesMap: Record<Locale, any> = {
+  en,
+  es,
+  fr,
+};
 
 const useLanguage = () => {
-  const [locale, setLocale] = useState<string>(defaultLocale);
-  const [messages, setMessages] = useState<any>(null);
+  const [locale, setLocale] = useState<Locale>(defaultLocale);
+  const [messages, setMessages] = useState<any>(messagesMap[defaultLocale]);
 
   useEffect(() => {
-    const browserLang = navigator.language.split("-")[0];
+    const browserLang = navigator.language.split("-")[0] as Locale;
     const selectedLang = locales.includes(browserLang) ? browserLang : defaultLocale;
-    setLocale(selectedLang);
 
-    // Load translations
-    try {
-      import(`@/i18n/messages/${selectedLang}.json`)
-        .then((module) => setMessages(module.default))
-        .catch(() => {
-          console.error("Error loading translations for", selectedLang);
-          import(`@/i18n/messages/${defaultLocale}.json`).then((module) => setMessages(module.default));
-        });
-    } catch (error) {
-      console.error("Error loading translations:", error);
-      import(`@/i18n/messages/${defaultLocale}.json`).then((module) => setMessages(module.default));
-    }
+    setLocale(selectedLang);
+    setMessages(messagesMap[selectedLang]);
   }, []);
 
   return { locale, messages };
