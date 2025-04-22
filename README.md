@@ -2,6 +2,24 @@
 
 Hara is a Next.js and TypeScript-based application that helps users discover the perfect skincare routine. Through an interactive quiz and data analysis, the platform offers personalized recommendations and progress tracking.
 
+I created Hara as a personal initiative with purpose: many people want to take care of their skin, but don't know where to start. The world of skincare can be confusing, full of contradictory information, expensive products and routines that don't suit everyone.
+
+Hara was born as a platform designed to guide users step by step. Through a friendly and personalized approach, it seeks to help each person to know their skin, understand their needs and receive a routine suited to their skin type, habits and budget.
+
+This project represents more than a technical practice; it is a way to apply technology to improve people's well-being. It allowed me to combine what I'm passionate about - skin health, clear design and user experience - with real tools like React, TypeScript and a scalable modular structure based on DDD (Domain Driven Design).
+
+---
+
+### 🖼️ Preview
+
+![demo1](./assets/demo1.JPG)
+
+![demo2](./assets/demo2.JPG)
+
+### ✨ Demo in action
+
+![Demo](./assets/demo.gif)
+
 ---
 
 ## 📂 Project structure
@@ -41,7 +59,6 @@ frontend-hara/
 
 This project is licensed under the MIT license.
 
-
 ## 📚 Sources of information
 
 * Next.js official documentation: https://nextjs.org/docs
@@ -58,23 +75,3 @@ This project is licensed under the MIT license.
 
 * Tailwind CSS: https://tailwindcss.com/docs/installation/using-vite
 
----
-
-I created Hara as a personal initiative with purpose: many people want to take care of their skin, but don't know where to start. The world of skincare can be confusing, full of contradictory information, expensive products and routines that don't suit everyone.
-
-Hara was born as a platform designed to guide users step by step. Through a friendly and personalized approach, it seeks to help each person to know their skin, understand their needs and receive a routine suited to their skin type, habits and budget.
-
-This project represents more than a technical practice; it is a way to apply technology to improve people's well-being. It allowed me to combine what I'm passionate about - skin health, clear design and user experience - with real tools like React, TypeScript and a scalable modular structure based on DDD (Domain Driven Design).
-
----
-
-### 🖼️ Preview
-
-![demo1](./assets/demo1.JPG)
-
-![demo2](./assets/demo2.JPG)
-
-
-### ✨ Demo in action
-
-![Demo](./assets/demo.gif)
