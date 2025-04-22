@@ -55,3 +55,8 @@ This project is licensed under the MIT license.
 
 * Tailwind CSS: https://tailwindcss.com/docs/installation/using-vite
 
+### 🖼️ Preview
+
+![demo1](./assets/demo1.JPG)
+
+![demo2](./assets/demo2.JPG)
