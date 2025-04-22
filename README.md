@@ -1,12 +1,10 @@
 # 🌟 Hara - Personalized Skin Care Routines Consultant
 
-Hara is a Next.js and TypeScript-based application that helps users discover the perfect skincare routine. Through an interactive quiz and data analysis, the platform offers personalized recommendations and progress tracking.
+Hara is a web app created with Next.js and TypeScript that generates personalized skin care routines.
 
-I created Hara as a personal initiative with purpose: many people want to take care of their skin, but don't know where to start. The world of skincare can be confusing, full of contradictory information, expensive products and routines that don't suit everyone.
+Using an interactive questionnaire and data analysis, it recommends products based on the user's skin type, habits and budget. It also allows for tracking and adjusting the routine over time.
 
-Hara was born as a platform designed to guide users step by step. Through a friendly and personalized approach, it seeks to help each person to know their skin, understand their needs and receive a routine suited to their skin type, habits and budget.
-
-This project represents more than a technical practice; it is a way to apply technology to improve people's well-being. It allowed me to combine what I'm passionate about - skin health, clear design and user experience - with real tools like React, TypeScript and a scalable modular structure based on DDD (Domain Driven Design).
+It is a useful solution for brands or projects looking to offer automated skincare recommendations, with a modern, accessible and scalable approach.
 
 ---
 
