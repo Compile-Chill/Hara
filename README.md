@@ -22,7 +22,6 @@ It is a useful solution for brands or projects looking to offer automated skinca
 ---
 
 ## 📂 Project structure
-
 ```
 frontend-hara/
 ├── .gitignore              # Files and folders ignored by Git
