@@ -1,3 +1,4 @@
+
 # 🌟 Hara - Personalized Skin Care Routines Consultant
 
 Hara is a web app created with Next.js, React and TypeScript that generates personalized skin care routines.
