@@ -49,7 +49,6 @@ frontend-hara/
             ├── en.json      # English translations
             ├── es.json      # Spanish translations
             └── fr.json      # French translations
-
 ```
 ---
 
