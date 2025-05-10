@@ -8,7 +8,6 @@ Using an interactive questionnaire and data analysis, it recommends products bas
 It is a useful solution for brands or projects looking to offer automated skincare recommendations, with a modern, accessible and scalable approach.
 
 ---
-
 ### 🖼️ Preview
 
 ![demo1](./assets/demo1.JPG)
