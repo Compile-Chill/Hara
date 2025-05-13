@@ -17,5 +17,67 @@
     "contact": "Contáctanos",
     "whatsapp": "Whatsapp: 322 123 XXXX",
     "email": "Correo: haraskincare@gmail.com"
+  },
+  "form": {
+    "step1": {
+      "title": "Información personal",
+      "firstName": "Primer nombre",
+      "middleName": "Segundo nombre (opcional)",
+      "lastName": "Primer apellido",
+      "secondLastName": "Segundo apellido",
+      "birthday": "Fecha de nacimiento",
+      "age": "Edad",
+      "countryCode": "Indicativo del país",
+      "phone": "Número de celular",
+      "gender": "¿Cómo te identificas?",
+      "country": "País",
+      "city": "Ciudad",
+      "email": "Correo electrónico",
+      "next": "Siguiente"
+    },
+    "step2": {
+      "title": "¿Cómo describirías tu piel?",
+      "back": "Atrás",
+      "next": "Siguiente",
+      "options": {
+        "normal": {
+          "title": "Normal",
+          "description": "Textura suave y uniforme, poros pequeños, rara vez presenta imperfecciones"
+        },
+        "dry": {
+          "title": "Seca",
+          "description": "Textura áspera, puede descamarse y necesita hidratación frecuente."
+        },
+        "oily": {
+          "title": "Grasa",
+          "description": "Tiende a brillar durante el día, tiene poros visibles o tendencia al acné"
+        },
+        "mixed": {
+          "title": "Mixta",
+          "description": "Zonas grasas en frente, nariz y barbilla, pero mejillas secas o normales"
+        },
+        "sensitive": {
+          "title": "Sensible",
+          "description": "Se irrita fácilmente por productos o clima, puede presentar enrojecimiento o ardor"
+        }
+      }
+    }
+  },
+  "genderOptions": {
+    "female": "Femenino",
+    "male": "Masculino",
+    "nonBinary": "No binario",
+    "preferNotToSay": "Prefiero no decirlo"
+  },
+  "wizard": {
+    "title": "Crear cuenta",
+    "steps": {
+      "step1": "Información personal",
+      "step2": "Conociendo tu piel",
+      "step3": "Objetivos",
+      "step4": "Alergias",
+      "step5": "Hábitos",
+      "step6": "Cuenta Hara"
+    }
   }
 }

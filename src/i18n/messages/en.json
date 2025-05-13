@@ -7,15 +7,77 @@
   "hero": {
     "title": "Renew your skin, renew your energy",
     "description": "Sign up for Hara Skincare and get access to personalized routines, an exclusive forum with answers to your questions, and a community where you can share experiences and advice. Your skin deserves the best, join today!",
-    "cta": "Open Account"
+    "cta": "Open account"
   },
   "bestsellers": {
     "title": "Our Bestsellers",
-    "description": "Discover each product with key ingredients, benefits, skin compatibility and user reviews"
+    "description": "Explore each product with key ingredients, benefits, skin compatibility and user reviews"
   },
   "footer": {
-    "contact": "Contact Us",
-    "whatsapp": "Whatsapp: 322 123 XXXX",
+    "contact": "Contact us",
+    "whatsapp": "WhatsApp: 322 123 XXXX",
     "email": "Email: haraskincare@gmail.com"
+  },
+  "form": {
+    "step1": {
+      "title": "Personal Information",
+      "firstName": "First name",
+      "middleName": "Middle name (optional)",
+      "lastName": "Last name",
+      "secondLastName": "Second last name",
+      "birthday": "Birthday",
+      "age": "Age",
+      "countryCode": "Country code",
+      "phone": "Phone number",
+      "gender": "How do you identify yourself?",
+      "country": "Country",
+      "city": "City",
+      "email": "Email",
+      "next": "Next"
+    },
+    "step2": {
+      "title": "How would you describe your skin?",
+      "back": "Back",
+      "next": "Next",
+      "options": {
+        "normal": {
+          "title": "Normal",
+          "description": "Smooth and even texture, small pores, rarely has imperfections"
+        },
+        "dry": {
+          "title": "Dry",
+          "description": "Rough texture, may flake and needs frequent moisturizing."
+        },
+        "oily": {
+          "title": "Oily",
+          "description": "Tends to shine during the day, tends to have visible pores or a tendency to acne"
+        },
+        "mixed": {
+          "title": "Mixed",
+          "description": "Oily areas on forehead, nose and chin (T-zone), but dry or normal cheeks"
+        },
+        "sensitive": {
+          "title": "Sensitive",
+          "description": "It is easily irritated by products or climate changes, may present redness or burning."
+        }
+      }
+    }
+  },
+  "genderOptions": {
+    "female": "Female",
+    "male": "Male",
+    "nonBinary": "Non-binary",
+    "preferNotToSay": "Prefer not to say"
+  },
+  "wizard": {
+    "title": "Create account",
+    "steps": {
+      "step1": "Personal Information",
+      "step2": "Knowing your skin",
+      "step3": "Goals",
+      "step4": "Allergies",
+      "step5": "Habits",
+      "step6": "Hara Account"
+    }
   }
 }

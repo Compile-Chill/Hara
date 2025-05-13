@@ -1,21 +1,83 @@
 {
-    "navbar": {
-        "store": "Boutique",
-        "about": "À propos de nous",
-        "community": "Communauté"
+  "navbar": {
+    "store": "Boutique",
+    "about": "À propos de nous",
+    "community": "Communauté"
+  },
+  "hero": {
+    "title": "Renouvelez votre peau, renouvelez votre énergie",
+    "description": "Inscrivez-vous à Hara Skincare et accédez à des routines personnalisées, un forum exclusif avec des réponses à vos questions et une communauté pour partager vos expériences et conseils. Votre peau mérite le meilleur, rejoignez-nous dès aujourd'hui !",
+    "cta": "Ouvrir un compte"
+  },
+  "bestsellers": {
+    "title": "Nos Meilleures Ventes",
+    "description": "Découvrez chaque produit avec ses ingrédients clés, ses bienfaits, sa compatibilité avec la peau et les avis des utilisateurs"
+  },
+  "footer": {
+    "contact": "Contactez-nous",
+    "whatsapp": "WhatsApp : 322 123 XXXX",
+    "email": "Email : haraskincare@gmail.com"
+  },
+  "form": {
+    "step1": {
+      "title": "Informations personnelles",
+      "firstName": "Prénom",
+      "middleName": "Deuxième prénom (optionnel)",
+      "lastName": "Nom de famille",
+      "secondLastName": "Deuxième nom de famille",
+      "birthday": "Date de naissance",
+      "age": "Âge",
+      "countryCode": "Indicatif du pays",
+      "phone": "Numéro de téléphone",
+      "gender": "Comment vous identifiez-vous ?",
+      "country": "Pays",
+      "city": "Ville",
+      "email": "Email",
+      "next": "Suivant"
     },
-    "hero": {
-        "title": "Renouvelez votre peau, renouvelez votre énergie",
-        "description": "Inscrivez-vous à Hara Skincare et accédez à des routines personnalisées, à un forum exclusif avec des réponses à vos questions et à une communauté où vous pouvez partager vos expériences et vos conseils - votre peau mérite le meilleur, inscrivez-vous dès aujourd'hui!",
-        "cta": "Ouvrir un compte"
-    },
-    "bestsellers": {
-        "title": "Nos meilleures ventes",
-        "description": "Découvrez chaque produit avec ses ingrédients clés, ses avantages, sa compatibilité avec la peau et les avis des utilisateurs"
-    },
-    "footer": {
-        "contact": "Contactez-nous",
-        "whatsapp": "Whatsapp : 322 123 XXXX",
-        "email": "Email : haraskincare@gmail.com"
+    "step2": {
+      "title": "Comment décririez-vous votre peau ?",
+      "back": "Retour",
+      "next": "Suivant",
+      "options": {
+        "normal": {
+          "title": "Normale",
+          "description": "Texture lisse et uniforme, pores petits, rarement des imperfections"
+        },
+        "dry": {
+          "title": "Sèche",
+          "description": "Texture rugueuse, peut peler et nécessite une hydratation fréquente."
+        },
+        "oily": {
+          "title": "Grasse",
+          "description": "Tendance à briller, pores visibles, tendance à l’acné"
+        },
+        "mixed": {
+          "title": "Mixte",
+          "description": "Zones grasses sur le front, le nez et le menton, mais joues normales ou sèches"
+        },
+        "sensitive": {
+          "title": "Sensible",
+          "description": "Facilement irritée par les produits ou le climat, peut présenter des rougeurs ou des picotements"
+        }
       }
+    }
+  },
+  "genderOptions": {
+    "female": "Féminin",
+    "male": "Masculin",
+    "nonBinary": "Non-binaire",
+    "preferNotToSay": "Je préfère ne pas le dire"
+  },
+  "wizard": {
+    "title": "Créer un compte",
+    "steps": {
+      "step1": "Informations personnelles",
+      "step2": "Connaître votre peau",
+      "step3": "Objectifs",
+      "step4": "Allergies",
+      "step5": "Habitudes",
+      "step6": "Compte Hara"
+    }
+  }
 }

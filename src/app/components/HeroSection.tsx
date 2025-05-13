@@ -1,6 +1,7 @@
 "use client";
 
 import useLanguage from "@/hooks/useLanguage"; 
+import Link from "next/link";
 
 export default function HeroSection() {
   const { locale, messages } = useLanguage();
@@ -14,9 +15,11 @@ export default function HeroSection() {
         <p className="mt-4 text-base text-gray-700">
           {messages?.hero?.description || "Default description"}
         </p>
-        <button className="mt-6 rounded-lg bg-white px-6 py-3 text-base font-semibold text-gray-900 shadow-md hover:bg-gray-100 w-[auto] max-w-[300px] mx-auto">
-          {messages?.hero?.cta || "Default CTA"}
-        </button>
+        <Link href="/signup">
+          <button className="mt-6 rounded-lg bg-white px-6 py-3 text-base font-semibold text-gray-900 shadow-md hover:bg-gray-100 w-[auto] max-w-[300px] mx-auto">
+            {messages?.hero?.cta || "Default CTA"}
+          </button>
+        </Link>
       </div>
 
       {/* Image only visible on large screens */}
