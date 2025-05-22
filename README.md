@@ -36,11 +36,17 @@ frontend-hara/
         ├── layout.tsx      # Root layout that wraps all pages
         ├── page.tsx        # Main landing page (home)
         ├── globals.css     # Global styles for the entire app
-        └── components/     # Reusable UI components used in the main layout/page
+        └── components/     # Reusable UI components used in the main layout/page      
             ├── BestsellerSection.tsx   # Section highlighting best-selling products
             ├── Footer.tsx              # Website footer component
             ├── HeroSection.tsx         # Hero section with main CTA (call to action)
-            └── Navbar.tsx              # Top navigation bar
+            ├── Navbar.tsx              # Top navigation bar
+            └── SignupForm/             # Multi-step form logic and UI for data collection
+                ├──SignupForm.tsx       # Form wrapper and step wizard with progress tracking
+                ├──Step1PersonalInfo.tsx  # Step 1: Collects personal and contact information
+                └──Step2SkinType.tsx    # Step 2: Asks for the user's skin type
+        └── signup/          # Route folder for the signup questionnaire flow
+        └── page.tsx         # Entry point that renders the multi-step signup form
     └── hooks/               # Custom React hooks for reusable logic
         └── useLanguage.ts   # Detects browser language and dynamically loads locale messages
     └── i18n/                # Internationalization (i18n) configuration
