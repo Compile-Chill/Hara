@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { FaCheck } from "react-icons/fa";
 import Step1PersonalInfo from "./Step1PersonalInfo";
 import Step2SkinType from "./Step2SkinType";
@@ -10,17 +10,35 @@ export default function SignUpForm() {
   const [step, setStep] = useState(1);
   const { messages } = useLanguage();
 
-  const steps = [
-    messages?.wizard?.steps?.step1,
-    messages?.wizard?.steps?.step2,
-    messages?.wizard?.steps?.step3,
-    messages?.wizard?.steps?.step4,
-    messages?.wizard?.steps?.step5,
-    messages?.wizard?.steps?.step6
-  ];
+  const steps = useMemo(
+    () => [
+      messages?.wizard?.steps?.step1,
+      messages?.wizard?.steps?.step2,
+      messages?.wizard?.steps?.step3,
+      messages?.wizard?.steps?.step4,
+      messages?.wizard?.steps?.step5,
+      messages?.wizard?.steps?.step6
+    ],
+    [messages]
+  );
 
-  const handleNext = () => setStep((prev) => prev + 1);
-  const handleBack = () => setStep((prev) => prev - 1);
+  const handleNext = () => {
+    if (step < stepComponents.length) {
+      setStep((prev) => prev + 1);
+    }
+  };
+
+  const handleBack = () => {
+    if (step > 1) {
+      setStep((prev) => prev - 1);
+    }
+  };
+
+  const stepComponents = [
+    <Step1PersonalInfo onNext={handleNext} />,
+    <Step2SkinType onNext={handleNext} onBack={handleBack} />,
+    // Add more steps here when needed
+  ];
 
   return (
     <div className="flex flex-col md:flex-row bg-[#e6f0fb] rounded-3xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out">
@@ -63,14 +81,11 @@ export default function SignUpForm() {
 
       {/* Form Content */}
       <div className="w-full md:w-2/3 px-8 py-10 bg-[#dceafa] rounded-r-3xl transition-opacity duration-500 ease-in-out">
-        {step === 1 && <Step1PersonalInfo onNext={handleNext} />}
-        {step === 2 && <Step2SkinType onNext={handleNext} onBack={handleBack} />}
+        {stepComponents[step - 1]}
       </div>
     </div>
   );
 }
-
-
 
 
 

@@ -12,7 +12,13 @@ export default function Step2SkinType({ onNext, onBack }: Step2SkinTypeProps) {
   const { messages } = useLanguage();
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
-  const skinOptions = ["normal", "dry", "oily", "mixed", "sensitive"];
+  const skinOptions = [
+    { id: "normal" },
+    { id: "dry" },
+    { id: "oily" },
+    { id: "mixed" },
+    { id: "sensitive" },
+  ];
 
   return (
     <div className="w-full px-6 py-4">
@@ -21,7 +27,7 @@ export default function Step2SkinType({ onNext, onBack }: Step2SkinTypeProps) {
       </h2>
 
       <div className="space-y-4">
-        {skinOptions.map((id) => (
+        {skinOptions.map(({ id }) => (
           <div
             key={id}
             onClick={() => setSelectedOption(id)}
