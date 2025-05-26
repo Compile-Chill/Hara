@@ -57,6 +57,17 @@ export default function Step1PersonalInfo({ onNext }: Step1PersonalInfoProps) {
     setFormData({ ...formData, [name]: value });
   };
 
+  const fields = [
+    { name: "firstName", label: messages?.form?.step1?.firstName },
+    { name: "middleName", label: messages?.form?.step1?.middleName },
+    { name: "birthday", label: messages?.form?.step1?.birthday, type: "date" },
+    { name: "age", label: messages?.form?.step1?.age, type: "number" },
+    { name: "countryCode", label: messages?.form?.step1?.countryCode },
+    { name: "phone", label: messages?.form?.step1?.phone },
+    { name: "country", label: messages?.form?.step1?.country },
+    { name: "city", label: messages?.form?.step1?.city },
+  ];
+
   return (
     <div className="w-full px-6 py-4">
       <h2 className="text-xl md:text-2xl font-semibold text-[#2b3e50] mb-6 border-b border-[#c3d8e6] pb-2">
@@ -64,23 +75,17 @@ export default function Step1PersonalInfo({ onNext }: Step1PersonalInfoProps) {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* First Name */}
-        <Field
-          name="firstName"
-          label={messages?.form?.step1?.firstName}
-          value={formData.firstName}
-          onChange={handleChange}
-          className={inputClass}
-        />
-
-        {/* Middle Name */}
-        <Field
-          name="middleName"
-          label={messages?.form?.step1?.middleName}
-          value={formData.middleName}
-          onChange={handleChange}
-          className={inputClass}
-        />
+        {fields.map(({ name, label, type }) => (
+          <Field
+            key={name}
+            name={name}
+            label={label}
+            value={formData[name as keyof typeof formData]}
+            onChange={handleChange}
+            className={inputClass}
+            type={type}
+          />
+        ))}
 
         {/* Last Name con col-span-2 */}
         <div className="md:col-span-2">
@@ -92,62 +97,6 @@ export default function Step1PersonalInfo({ onNext }: Step1PersonalInfoProps) {
             className={inputClass}
           />
         </div>
-
-        {/* Birthday */}
-        <Field
-          name="birthday"
-          label={messages?.form?.step1?.birthday}
-          type="date"
-          value={formData.birthday}
-          onChange={handleChange}
-          className={inputClass}
-        />
-
-        {/* Age */}
-        <Field
-          name="age"
-          label={messages?.form?.step1?.age}
-          type="number"
-          value={formData.age}
-          onChange={handleChange}
-          className={inputClass}
-        />
-
-        {/* Country Code */}
-        <Field
-          name="countryCode"
-          label={messages?.form?.step1?.countryCode}
-          value={formData.countryCode}
-          onChange={handleChange}
-          className={inputClass}
-        />
-
-        {/* Phone */}
-        <Field
-          name="phone"
-          label={messages?.form?.step1?.phone}
-          value={formData.phone}
-          onChange={handleChange}
-          className={inputClass}
-        />
-
-        {/* Country */}
-        <Field
-          name="country"
-          label={messages?.form?.step1?.country}
-          value={formData.country}
-          onChange={handleChange}
-          className={inputClass}
-        />
-
-        {/* City */}
-        <Field
-          name="city"
-          label={messages?.form?.step1?.city}
-          value={formData.city}
-          onChange={handleChange}
-          className={inputClass}
-        />
 
         {/* Gender */}
         <div className="md:col-span-2">
