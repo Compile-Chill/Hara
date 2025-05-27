@@ -9,11 +9,17 @@ It is a useful solution for brands or projects looking to offer automated skinca
 
 ---
 
-### 🖼️ Preview
+### 🖼️ Homepage
 
 ![demo1](./assets/demo1.JPG)
 
 ![demo2](./assets/demo2.JPG)
+
+### 🖼️ Questionnaire
+
+![demo3](./assets/demo3.JPG)
+
+![demo4](./assets/demo4.JPG)
 
 ### ✨ Demo in action
 

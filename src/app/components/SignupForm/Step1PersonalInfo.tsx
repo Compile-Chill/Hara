@@ -14,7 +14,8 @@ const inputClass =
 const personalInfoSchema = z.object({
   firstName: z.string().min(1),
   middleName: z.string().optional(),
-  lastName: z.string().min(1),
+  firstLastName: z.string().min(1),
+  secondLastName: z.string().optional(),
   birthday: z.string().min(1),
   age: z.string().min(1),
   countryCode: z.string().regex(/^\d+$/, "Must be numeric"),
@@ -31,7 +32,8 @@ export default function Step1PersonalInfo({ onNext }: Step1PersonalInfoProps) {
   const [formData, setFormData] = useState({
     firstName: "",
     middleName: "",
-    lastName: "",
+    firstLastName: "",
+    secondLastName: "",
     birthday: "",
     age: "",
     countryCode: "",
@@ -60,6 +62,8 @@ export default function Step1PersonalInfo({ onNext }: Step1PersonalInfoProps) {
   const fields = [
     { name: "firstName", label: messages?.form?.step1?.firstName },
     { name: "middleName", label: messages?.form?.step1?.middleName },
+    { name: "firstLastName", label: messages?.form?.step1?.firstLastName },
+    { name: "secondLastName", label: messages?.form?.step1?.secondLastName },
     { name: "birthday", label: messages?.form?.step1?.birthday, type: "date" },
     { name: "age", label: messages?.form?.step1?.age, type: "number" },
     { name: "countryCode", label: messages?.form?.step1?.countryCode },
@@ -86,17 +90,6 @@ export default function Step1PersonalInfo({ onNext }: Step1PersonalInfoProps) {
             type={type}
           />
         ))}
-
-        {/* Last Name con col-span-2 */}
-        <div className="md:col-span-2">
-          <Field
-            label={messages?.form?.step1?.lastName}
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            className={inputClass}
-          />
-        </div>
 
         {/* Gender */}
         <div className="md:col-span-2">
