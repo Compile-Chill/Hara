@@ -61,6 +61,35 @@
           "description": "Facilement irritée par les produits ou le climat, peut présenter des rougeurs ou des picotements"
         }
       }
+    },
+    "step3": {
+      "title": "Objectifs",
+      "options": {
+        "hydration": {
+          "title": "Hydratation",
+          "description": "Garder votre peau hydratée et éviter la sécheresse."
+        },
+        "oilControl": {
+          "title": "Contrôle du sébum",
+          "description": "Réduire la brillance et équilibrer les zones grasses."
+        },
+        "texture": {
+          "title": "Améliorer la texture",
+          "description": "Lisser les irrégularités et les zones rugueuses."
+        },
+        "evenTone": {
+          "title": "Unifier le teint",
+          "description": "Réduire les taches, rougeurs ou décolorations."
+        },
+        "acne": {
+          "title": "Contrôler l'acné",
+          "description": "Prévenir ou réduire les boutons et imperfections."
+        },
+        "antiAging": {
+          "title": "Prévenir le vieillissement",
+          "description": "Réduire les rides et les signes précoces de l'âge."
+        }
+      }
     }
   },
   "genderOptions": {
