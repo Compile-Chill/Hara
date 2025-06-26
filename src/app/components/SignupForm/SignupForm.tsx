@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { FaCheck } from "react-icons/fa";
 import Step1PersonalInfo from "./Step1PersonalInfo";
 import Step2SkinType from "./Step2SkinType";
+import Step3Goals from "./Step3Goals";
 import useLanguage from "@/hooks/useLanguage";
 
 export default function SignUpForm() {
@@ -37,7 +38,7 @@ export default function SignUpForm() {
   const stepComponents = [
     <Step1PersonalInfo onNext={handleNext} />,
     <Step2SkinType onNext={handleNext} onBack={handleBack} />,
-    // Add more steps here when needed
+    <Step3Goals onNext={handleNext} onBack={handleBack} />,
   ];
 
   return (
@@ -80,14 +81,12 @@ export default function SignUpForm() {
       </div>
 
       {/* Form Content */}
-      <div className="w-full md:w-2/3 px-8 py-10 bg-[#dceafa] rounded-r-3xl transition-opacity duration-500 ease-in-out">
+      <div className="w-full md:w-2/3 px-8 py-10 bg-[#dceafa] rounded-r-3xl transition-opacity duration-500 ease-in-out min-w-[500px] md:min-w-[600px]">
         {stepComponents[step - 1]}
       </div>
     </div>
   );
 }
-
-
 
 
 

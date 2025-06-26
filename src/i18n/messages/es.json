@@ -61,6 +61,35 @@
           "description": "Se irrita fácilmente por productos o clima, puede presentar enrojecimiento o ardor"
         }
       }
+    },
+    "step3": {
+      "title": "Objetivos",
+      "options": {
+        "hydration": {
+          "title": "Hidratación",
+          "description": "Mantener la piel hidratada y evitar la resequedad."
+        },
+        "oilControl": {
+          "title": "Control de grasa",
+          "description": "Reducir el brillo y equilibrar zonas grasas."
+        },
+        "texture": {
+          "title": "Mejorar textura",
+          "description": "Suavizar asperezas e irregularidades."
+        },
+        "evenTone": {
+          "title": "Unificar tono",
+          "description": "Reducir manchas, enrojecimiento o zonas desiguales."
+        },
+        "acne": {
+          "title": "Controlar el acné",
+          "description": "Prevenir o reducir brotes e imperfecciones."
+        },
+        "antiAging": {
+          "title": "Prevenir envejecimiento",
+          "description": "Minimizar arrugas y signos tempranos de la edad."
+        }
+      }
     }
   },
   "genderOptions": {

@@ -61,6 +61,35 @@
           "description": "It is easily irritated by products or climate changes, may present redness or burning."
         }
       }
+    },
+    "step3": {
+      "title": "Goals",
+      "options": {
+        "hydration": {
+          "title": "Hydration",
+          "description": "Keep your skin moisturized and prevent dryness."
+        },
+        "oilControl": {
+          "title": "Oil control",
+          "description": "Reduce excess shine and balance oily areas."
+        },
+        "texture": {
+          "title": "Improve texture",
+          "description": "Smooth out roughness and irregularities."
+        },
+        "evenTone": {
+          "title": "Even skin tone",
+          "description": "Reduce spots, discoloration or redness."
+        },
+        "acne": {
+          "title": "Control acne",
+          "description": "Prevent or reduce acne and breakouts."
+        },
+        "antiAging": {
+          "title": "Prevent aging",
+          "description": "Minimize wrinkles and early signs of aging."
+        }
+      }
     }
   },
   "genderOptions": {
