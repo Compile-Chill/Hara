@@ -21,6 +21,8 @@ It is a useful solution for brands or projects looking to offer automated skinca
 
 ![demo4](./assets/demo4.JPG)
 
+![demo5](./assets/demo5.JPG)
+
 ### ✨ Demo in action
 
 ![Demo](./assets/demo.gif)
@@ -50,7 +52,8 @@ frontend-hara/
             └── SignupForm/             # Multi-step form logic and UI for data collection
                 ├──SignupForm.tsx       # Form wrapper and step wizard with progress tracking
                 ├──Step1PersonalInfo.tsx  # Step 1: Collects personal and contact information
-                └──Step2SkinType.tsx    # Step 2: Asks for the user's skin type
+                ├──Step2SkinType.tsx    # Step 2: Asks for the user's skin type
+                └──Step3Goals.tsx       # Step 3: Asks for the user's skincare goals
         └── signup/          # Route folder for the signup questionnaire flow
         └── page.tsx         # Entry point that renders the multi-step signup form
     └── hooks/               # Custom React hooks for reusable logic
